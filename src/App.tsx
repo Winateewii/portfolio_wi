@@ -1,11 +1,13 @@
 import React from 'react'
 // import { useEffect } from 'react'
-import Navbar from './components/header/Navbar'
+import Header from './components/header/Header'
+import Main from './components/main/Main'
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
+      <Header />
+      <Main />
     </>
   )
 }
