@@ -3,7 +3,7 @@ const Skills = () => {
 
     return (
 
-        <div className="bg-gray-100 flex items-center justify-center p-4">
+        <div id='skill' className="bg-gray-100 flex items-center justify-center p-4">
             <div className="mx-4 my-12 flex w-full flex-col items-center justify-between gap-8 lg:max-w-[1200px] lg:flex-row lg:gap-24">
                 <div className="flex w-full max-w-[550px] flex-col gap-4">
                     <h2 className="text-3xl font-bold lg:text-4xl text-gray-800">Skills</h2>

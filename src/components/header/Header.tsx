@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useMediaQuery } from "@uidotdev/usehooks";
+import React, { useState, useEffect } from 'react'
+import { useMediaQuery } from "@uidotdev/usehooks"
 import { HiX, HiOutlineMenu } from "react-icons/hi"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Header = () => {
     const [showMenu, setMenu] = useState(false)
@@ -17,9 +18,10 @@ const Header = () => {
                         </a>
                     </div>
                     {isDesktop ? (<div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-12">
-                        <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">About Me</a>
-                        <a href="#project" className="text-sm font-semibold leading-6 text-gray-900">Project</a>
-                        <a href="#contact" className="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+                        <AnchorLink href="#skill" className="text-sm font-semibold leading-6 text-gray-900">Skill</AnchorLink>
+                        <AnchorLink href="#project" className="text-sm font-semibold leading-6 text-gray-900">Project</AnchorLink>
+                        <AnchorLink href="#contact" className="text-sm font-semibold leading-6 text-gray-900">Contact</AnchorLink>
+
                     </div>
                     ) : (
                         <div
@@ -37,24 +39,9 @@ const Header = () => {
                             setMenu(false);
                         }}
                     >
-                        <div
-                            className="flex h-16 w-full cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-blue-500"
-                        // onClick={scrollToToolAbout}
-                        >
-                            About Me
-                        </div>
-                        <div
-                            className="flex h-16 w-full cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-blue-500"
-                        // onClick={scrollToToolStack}
-                        >
-                            Project
-                        </div>
-                        <div
-                            className="flex h-16 w-full cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-blue-500"
-                        // onClick={scrollToToolStack}
-                        >
-                            Contact
-                        </div>
+                        <AnchorLink href="#skill" className="flex h-16 w-full cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-blue-500">Skill</AnchorLink>
+                        <AnchorLink href="#project" className="flex h-16 w-full cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-blue-500">Project</AnchorLink>
+                        <AnchorLink href="#contact" className="flex h-16 w-full cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-blue-500">Contact</AnchorLink>
                     </div>
                 )}
             </div>
